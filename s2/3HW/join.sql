@@ -19,7 +19,7 @@ JOIN service.sellers s
 ON u.user_id = s.user_id
 JOIN service.ads a
 ON a.seller_id = s.seller_id
-GROUP BY u.user_id;
+GROUP BY u.user_idl;
 
 EXPLAIN (ANALYZE, BUFFERS)
 SELECT v.brand, count(a.ad_id)
