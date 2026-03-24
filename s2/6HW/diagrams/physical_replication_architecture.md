@@ -1,0 +1,4 @@
+```mermaid
+flowchart LR
+    A[primary\nPostgreSQL\nport 5432] -->|physical streaming replication| B[replica1\nstandby\nport 5433]
+    A -->|physical streaming replication| C[replica2\nstandby\nport 5434]
