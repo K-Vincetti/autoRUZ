@@ -1,0 +1,36 @@
+db.createCollection("products")
+
+db.products.insertMany([
+{
+  name: "iPhone 15",
+  category: "electronics",
+  price: 120000,
+  inStock: true,
+  manufacturer: { name: "Apple", country: "USA" }
+},
+{
+  name: "Samsung Galaxy",
+  category: "electronics",
+  price: 90000,
+  inStock: true,
+  manufacturer: { name: "Samsung", country: "South Korea" }
+},
+{
+  name: "Ноутбук Asus",
+  category: "electronics",
+  price: 80000,
+  inStock: false,
+  manufacturer: { name: "Asus", country: "Taiwan" }
+},
+{
+  name: "Мышь Logitech",
+  category: "accessories",
+  price: 3000,
+  inStock: true,
+  manufacturer: { name: "Logitech", country: "Switzerland" }
+}
+])
+
+db.products.find({ inStock: true }).pretty()
+
+db.products.find({ category: "electronics" }).pretty()
